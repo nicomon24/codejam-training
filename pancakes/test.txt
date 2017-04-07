@@ -1,0 +1,6 @@
+- Sposta sempre >=2
+- Sposta max v/2
+
+- smallest divisor that is not in others??
+
+[1, 5, 7, 8]
