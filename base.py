@@ -1,4 +1,4 @@
-import sys, logging
+import sys, logging, random
 import numpy as np
 from collections import defaultdict
 
@@ -7,7 +7,7 @@ logging.basicConfig(stream=sys.stderr, level=logging.DEBUG)
 
 # ---- INPUT / OUTPUT SETUP -----
 if len(sys.argv) != 2:
-    print "ERROR. Correct usage: python scipt.py file"
+    print("ERROR. Correct usage: python scipt.py file")
     sys.exit(0)
 # Create an output filename from the standard competition input dataset names
 def outputFilenameFromInput(infilename):
@@ -27,7 +27,7 @@ input_rows = list(input_file)
 # ------- SOLVE BELOW THIS ---------
 # Parsing input file to problem vars
 # READ SINGLE INT: int(input_rows[i])
-# READ INT LIST: map(int, input_rows[i].split(' '))
+# READ INT LIST: [int(x) for x in input_rows[i].split(' ')]
 # WRITE LINE: output_file.write(line + "\n")
 # ----------------------------------
 
@@ -36,6 +36,7 @@ N = int(input_rows[0])
 input_rows = input_rows[1:]
 # Loop through all the tests
 for i in range(0, N):
+    logging.info("Computing case %d", i+1)
     # Compute
     x = "<RESULT HERE>"
     # Write to output file
